@@ -4,7 +4,6 @@
 - [Conway's game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Rules)
 - [The immigration game](https://en.wikipedia.org/wiki/Cyclic_cellular_automaton)
 - [Schelling's segregation model](http://nifty.stanford.edu/2014/mccown-schelling-model-segregation/)
-- Boids (Swarm simmulation)
 
 ## Getting started
 
