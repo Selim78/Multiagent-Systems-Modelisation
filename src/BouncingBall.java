@@ -5,7 +5,7 @@ import java.util.Random;
 /**
 * A ball that has a speed a size and a color
 */
-public class Ball {
+public class BouncingBall {
 	private Point ball;
 	// we save the initial position
 	private Point init;
@@ -14,7 +14,7 @@ public class Ball {
 	private int radius;
 
 	// constructors
-	public Ball() {
+	public BouncingBall() {
 		Random rand = new Random();
 		this.ball = new Point();
 		this.init = new Point();
@@ -26,7 +26,7 @@ public class Ball {
 		this.radius = rand.nextInt(50);
 	}
 
-	public Ball(int x, int y) {
+	public BouncingBall(int x, int y) {
 		Random rand = new Random();
 		this.ball = new Point(x, y);
 		this.init = new Point(x, y);
@@ -72,6 +72,6 @@ public class Ball {
 
 	@Override
 	public String toString() {
-		return "Ball[x=" + ball.x + ", y=" + ball.y + "]";
+		return "BouncingBall[x=" + ball.x + ", y=" + ball.y + "]";
 	}
 }

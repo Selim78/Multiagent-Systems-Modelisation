@@ -16,27 +16,19 @@ make all
 ```
 Or one by one:
 ```sh
-make compileBalls
+make compileBouncingBalls
 make compileConway
 make compileImmigration
 make compileSchelling
-make compileBoids
-```
-
-The cells simulations (Conway, Immigration and Schelling) can also be compiled at once:
-
-```sh
-make compileCells
 ```
 
 ### Lauching the simmulations
 
 ```sh
-make exeBalls
+make exeBouncingBalls
 make exeConway
 make exeImmigration
 make exeSchelling
-make exeBoids
 ```
 
 ### Other make functionalities
@@ -48,7 +40,7 @@ make javadoc
 ```
 Cleaning (`bin/*.class` and `./javadoc`)
 ```sh
-make javadoc
+make clean
 ```
 
 ## Simulation parameters
@@ -110,6 +102,8 @@ int initialProbability = 50; // probability (percentage) for a cell not to start
 
 ![schelling-initialProbability-50-nbState-2-K-2](results/schelling-initialProbability-50-nbState-2-K-2.gif)
 
-## Code structure
+## Conception choices
 
 ![uml](results/uml.png)
+
+- Note : when updating the next states of the cells, we use an iterator that returns all the values between 0 and a max value in a random order. That insures the realism of the model. (see `ShuffleIterator`)

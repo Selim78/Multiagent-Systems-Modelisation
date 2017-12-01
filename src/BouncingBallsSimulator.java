@@ -6,20 +6,20 @@ import gui.Oval;
 import gui.GUISimulator;
 
 /** A simulable group of bouncing balls.*/
-public class BallsSimulator implements Simulable {
-	private Balls balls;
+public class BouncingBallsSimulator implements Simulable {
+	private BouncingBalls balls;
 	private GUISimulator gui;
 
-	public BallsSimulator(GUISimulator gui, int nbBalls) {
+	public BouncingBallsSimulator(GUISimulator gui, int nbBouncingBalls) {
 		this.gui = gui;
-		this.balls = new Balls(nbBalls);
+		this.balls = new BouncingBalls(nbBouncingBalls);
 	}
 
 	public int size() {
 		return this.balls.size();
 	}
 
-	public Ball get(int i) {
+	public BouncingBall get(int i) {
 		return this.balls.get(i);
 	}
 
@@ -29,10 +29,11 @@ public class BallsSimulator implements Simulable {
 
 		this.balls.translate(gui.getPanelWidth(), gui.getPanelHeight());
 
-		System.out.println(this.balls);
+		// trace
+		//System.out.println(this.balls);
 
 		for (int i = 0; i < this.balls.size(); i++) {
-			Ball b = this.balls.get(i);
+			BouncingBall b = this.balls.get(i);
 			Color color = b.color();
 			int size = b.radius();
 			this.gui.addGraphicalElement(new Oval(b.x(), b.y(), color, color, size));

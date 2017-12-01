@@ -1,24 +1,24 @@
 import java.util.ArrayList;
 
 /** Many balls. */
-public class Balls {
-	private ArrayList<Ball> list;
+public class BouncingBalls {
+	private ArrayList<BouncingBall> list;
 
-	public Balls() {
-		this.list = new ArrayList<Ball>();
+	public BouncingBalls() {
+		this.list = new ArrayList<BouncingBall>();
 	}
 
-	/** Building a group of nbBalls
-	* @param nbBalls An int representing the number of balls.
+	/** Building a group of nbBouncingBalls
+	* @param nbBouncingBalls An int representing the number of balls.
 	*/
-	public Balls(int nbBalls) {
-		this.list = new ArrayList<Ball>();
-		for (int i = 0; i < nbBalls; i++) {
+	public BouncingBalls(int nbBouncingBalls) {
+		this.list = new ArrayList<BouncingBall>();
+		for (int i = 0; i < nbBouncingBalls; i++) {
 			this.add();
 		}
 	}
 
-	public Ball get(int i) {
+	public BouncingBall get(int i) {
 		return this.list.get(i);
 	}
 
@@ -27,20 +27,20 @@ public class Balls {
 	}
 
 	public void add() {
-		Ball b = new Ball();
+		BouncingBall b = new BouncingBall();
 		this.list.add(b);
 	}
 
 	public void add(int x, int y) {
-		Ball b = new Ball(x, y);
+		BouncingBall b = new BouncingBall(x, y);
 		this.list.add(b);
 	}
 
-	public Ball remove(int index) {
+	public BouncingBall remove(int index) {
 		return this.list.remove(index);
 	}
 
-	public boolean remove(Ball b) {
+	public boolean remove(BouncingBall b) {
 		return this.list.remove(b);
 	}
 
@@ -50,7 +50,7 @@ public class Balls {
 	* @param  height of the frame
 	*/
 	public void translate(int width, int height) {
-		for (Ball b : this.list) {
+		for (BouncingBall b : this.list) {
 			if (b.x() > width || b.x() < 0) {
 				b.changeDirection(-1, 1);
 			}
@@ -62,7 +62,7 @@ public class Balls {
 	}
 
 	public void reInit() {
-		for (Ball b : this.list) {
+		for (BouncingBall b : this.list) {
 			b.reInit();
 		}
 	}
@@ -73,11 +73,11 @@ public class Balls {
 		int i;
 
 		for (i = 0; i < this.list.size() - 1; i++) {
-			Ball b = this.list.get(i);
+			BouncingBall b = this.list.get(i);
 			s += b.toString() + ", ";
 		}
 
-		Ball b = this.list.get(this.list.size() - 1);
+		BouncingBall b = this.list.get(this.list.size() - 1);
 		s += b.toString() + "]";
 
 		return s;
