@@ -1,6 +1,6 @@
 # Multiagent Systems Modeling in java
 
-*Second year Java project at Ensimag - Grenoble INP*
+*Second year Java project at Ensimag - Grenoble INP - 2017*
 
 ![Results](./results/results.png)
 
