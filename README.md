@@ -2,6 +2,8 @@
 
 *Second year Java project at Ensimag - Grenoble INP*
 
+![Results](./results/results.png)
+
 - Simple bouncing balls
 - [Conway's game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Rules)
 - [The immigration game](https://en.wikipedia.org/wiki/Cyclic_cellular_automaton)
