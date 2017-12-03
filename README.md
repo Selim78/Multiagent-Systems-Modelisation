@@ -67,7 +67,7 @@ Here are some example simulation results:
 
 Random directions, velocities, sizes and colors.
 
-![balls-nbBalls-50](results/balls-nbBalls-50.gif)
+![balls-nbBalls-50](https://media.giphy.com/media/3o6fITtVr4GL6do3ss/giphy.gif)
 
 ### Conway game
 ```java
@@ -77,7 +77,7 @@ int m = 200; // number of cells horizontally
 int initialProbability = 10; // probability (percentage) that a cell will begin the simulation alive
 ```
 
-![conway-initialProbability-10-nbState-2-K-3](results/conway-initialProbability-10-nbState-2-K-3.gif)
+![conway-initialProbability-10-nbState-2-K-3](https://media.giphy.com/media/xUNd9EWsRbHolVYeSA/giphy.gif)
 
 ### Immigration game
 
@@ -90,7 +90,7 @@ int K = 3; // number of neighboors threshold
 int initialProbability = 70; // probability (percentage) for a cell to start at a state > 0
 ```
 
-![immigration-initialProbability-70-nbState-3-K-3](results/immigration-initialProbability-70-nbState-3-K-3.gif)
+![immigration-initialProbability-70-nbState-3-K-3](https://media.giphy.com/media/l0CLVvUXxliaOwmw8/giphy.gif)
 
 ### Schelling model
 
@@ -103,10 +103,10 @@ int K = 3; // number of neighboors threshold
 int initialProbability = 50; // probability (percentage) for a cell not to start empty
 ```
 
-![schelling-initialProbability-50-nbState-2-K-2](results/schelling-initialProbability-50-nbState-2-K-2.gif)
+![schelling-initialProbability-50-nbState-2-K-2](https://media.giphy.com/media/l3mZ3b5YMHHSG9N1C/giphy.gif)
 
-## Conception choices
+## Class diagram
 
-![uml](results/uml.png)
+![class_diagram](https://i.imgur.com/GvcyWRn.png)
 
 - Note : when updating the next states of the cells, we use an iterator that returns all the values between 0 and a max value in a random order. That insures the realism of the model. (see `ShuffleIterator`)
