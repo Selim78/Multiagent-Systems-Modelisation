@@ -85,7 +85,7 @@ public abstract class AbstractCells {
 			Cell c = this.getCell(i, j);
 
 			int currentState = c.getState();
-			int nextState = nextState(currentState, enoughNeighboors(i, j));
+			int nextState = nextState(currentState, nbNeighboors(i, j));
 			c.setNextState(nextState);
 		}
 	}
@@ -96,16 +96,16 @@ public abstract class AbstractCells {
 	* Returns true if there are enough neighboors.
 	* @param i Row of the cell.
 	* @param j Column of the cell.
-	* @return True if cell (i, j) has more than K neighboors of the appropriate type (as defined by the model).
+	* @return number of neighboors of the appropriate type (as defined by the model).
 	*/
-	public abstract Boolean enoughNeighboors(int i, int j);
+	public abstract int nbNeighboors(int i, int j);
 
 	/** Computes and returns the next state of a cell according to the model.
 	* @param currentState An int representing current state of the cell.
-	* @param enoughNeighboors True if cell has more than K neighboors of the appropriate type (as defined by the model).
+	* @param nbNeighboors True if cell has more than K neighboors of the appropriate type (as defined by the model).
 	* @return An int representing next state of the cell.
 	*/
-	public abstract int nextState(int currentState, Boolean enoughNeighboors);
+	public abstract int nextState(int currentState, int nbNeighboors);
 
 
 

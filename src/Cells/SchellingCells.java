@@ -25,7 +25,7 @@ public class SchellingCells extends AbstractCells {
 			Cell c = this.getCell(i, j);
 
 			int currentState = c.getState();
-			int nextState = nextState(currentState, enoughNeighboors(i, j));
+			int nextState = nextState(currentState, nbNeighboors(i, j));
 			c.setNextState(nextState);
 
 			// we update the set of empty cells
@@ -53,10 +53,10 @@ public class SchellingCells extends AbstractCells {
 	* Returns true if there are enough neighboors.
 	* @param i Row of the cell.
 	* @param j Column of the cell.
-	* @return True if the cell (i, j) has too much neighboors in different states than its one.
+	* @return number of neighboors in different states than its one.
 	*/
 	@Override
-	public Boolean enoughNeighboors(int i, int j) {
+	public int nbNeighboors(int i, int j) {
 		// count of the number of neighboors
 		int count = 0;
 		int targetState;
@@ -72,20 +72,20 @@ public class SchellingCells extends AbstractCells {
 				}
 			}
 		}
-		return count >= this.K;
+		return count;
 	}
 
 
 	/** Computes and returns the next state of a cell according to the model.
 	* @param currentState An int representing current state of the cell.
-	* @param enoughNeighboors True if the cell has too much neighboors in different states than its one.
+	* @param nbNeighboors True if the cell has too much neighboors in different states than its one.
 	* @return An int representing next state of the cell.
 	*/
 	@Override
-	public int nextState(int currentState, Boolean enoughNeighboors) {
+	public int nextState(int currentState, int nbNeighboors) {
 		int nextState;
 
-		if (enoughNeighboors) {
+		if (nbNeighboors >= this.K) {
 			nextState = 0;
 		} else {
 			nextState = currentState;

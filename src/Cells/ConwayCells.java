@@ -11,10 +11,10 @@ public class ConwayCells extends AbstractCells {
 	* Returns true if there are enough neighboors.
 	* @param i Row of the cell.
 	* @param j Column of the cell.
-	* @return True if cell (i, j) has more than K neighboors alive.
+	* @return number of neighboors alive.
 	*/
 	@Override
-	public Boolean enoughNeighboors(int i, int j) {
+	public int nbNeighboors(int i, int j) {
 
 		// count of the number of neighboors
 		int count = 0;
@@ -31,15 +31,15 @@ public class ConwayCells extends AbstractCells {
 				}
 			}
 		}
-		return count >= this.K;
+		return count;
 	}
 
 	@Override
-	public int nextState(int currentState, Boolean enoughNeighboors) {
+	public int nextState(int currentState, int nbNeighboors) {
 
 		int nextState;
 
-		if (enoughNeighboors) {
+		if ((nbNeighboors == 3 && currentState == 0) || ((nbNeighboors == 2 || nbNeighboors == 3) && currentState == 1)) {
 			nextState = 1;
 		} else {
 			nextState = 0;

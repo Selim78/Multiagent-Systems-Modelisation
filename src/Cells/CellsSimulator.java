@@ -34,9 +34,9 @@ public class CellsSimulator implements Simulable {
 				Color color = new Color(255, 255 - value, value, value);
 
 				// Whichever model is used, if there are only 2 states,
-				// the colors will be white and cyan. Because it's more beautiful.
+				// the colors will be red and black. Because it's more beautiful.
 				if(this.cells.getNbState() == 2) {
-					color = new Color(255 - value, 255, 255);
+					color = new Color(255 - value, 0, 0);
 				}
 
 				// we add the cell to the gui

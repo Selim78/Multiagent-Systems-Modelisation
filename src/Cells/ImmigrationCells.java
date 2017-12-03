@@ -10,10 +10,10 @@ public class ImmigrationCells extends AbstractCells {
 	* Returns true if there are enough neighboors.
 	* @param i Row of the cell.
 	* @param j Column of the cell.
-	* @return True if cell (i, j) has more than K neighboors in the state k+1 % `nbState` (where k is the current state).
+	* @return number of neighboors in the state k+1 % `nbState` (where k is the current state).
 	*/
 	@Override
-	public Boolean enoughNeighboors(int i, int j) {
+	public int nbNeighboors(int i, int j) {
 		// count of the number of neighboors
 		int count = 0;
 		int targetState;
@@ -29,20 +29,20 @@ public class ImmigrationCells extends AbstractCells {
 				}
 			}
 		}
-		return count >= this.K;
+		return count;
 	}
 
 	/** Computes and returns the next state of a cell according to the model.
 	* @param currentState An int representing current state of the cell.
-	* @param enoughNeighboors True if cell has more than K neighboors in the state k+1 % `nbState` (where k is the current state).
+	* @param nbNeighboors True if cell has more than K neighboors in the state k+1 % `nbState` (where k is the current state).
 	* @return An int representing next state of the cell.
 	*/
 	@Override
-	public int nextState(int currentState, Boolean enoughNeighboors) {
+	public int nextState(int currentState, int nbNeighboors) {
 		// Computes and returns the next state of a cell
 		int nextState;
 
-		if (enoughNeighboors) {
+		if (nbNeighboors >= this.K) {
 			nextState = (currentState + 1) % this.nbState;
 		} else {
 			nextState = currentState;

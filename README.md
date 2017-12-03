@@ -72,10 +72,10 @@ Random directions, velocities, sizes and colors.
 // Parameters of the simulation
 int n = 200; // number of cells vertically
 int m = 200; // number of cells horizontally
-int initialProbability = 6; // probability (percentage) that a cell will begin the simulation alive
+int initialProbability = 10; // probability (percentage) that a cell will begin the simulation alive
 ```
 
-![conway-initialProbability-6-nbState-2-K-3](results/conway-initialProbability-6-nbState-2-K-3.gif)
+![conway-initialProbability-10-nbState-2-K-3](results/conway-initialProbability-10-nbState-2-K-3.gif)
 
 ### Immigration game
 

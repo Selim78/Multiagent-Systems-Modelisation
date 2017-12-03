@@ -8,7 +8,7 @@ public class TestConway {
 		// Parameters of the simulation
 		int n = 200; // number of cells vertically
 		int m = 200; // number of cells horizontally
-		int initialProbability = 6; // probability (percentage) that a cell will begin the simulation alive
+		int initialProbability = 10; // probability (percentage) that a cell will begin the simulation alive
 
 		ConwayCells cells = new ConwayCells(n, m, initialProbability);
 

@@ -1,21 +1,21 @@
-all: compileBouncingBalls compileCells compileConway compileImmigration compileSchelling compileBoids compileBalls
+all: compileBouncingBalls compileCells compileConway compileImmigration compileSchelling
 
 compileBouncingBalls:
-	javac -d bin -classpath bin/gui.jar -sourcepath src src/TestBouncingBallsSimulator.java
+	javac -d bin -classpath bin/gui.jar -sourcepath src/BouncingBalls src/BouncingBalls/TestBouncingBallsSimulator.java
 
 compileCells:
-	javac -Xlint -d bin -classpath bin/gui.jar -sourcepath src src/TestConway.java
-	javac -Xlint -d bin -classpath bin/gui.jar -sourcepath src src/TestImmigration.java
-	javac -Xlint -d bin -classpath bin/gui.jar -sourcepath src src/TestSchelling.java
+	javac -Xlint -d bin -classpath bin/gui.jar -sourcepath src/Cells src/Cells/TestConway.java
+	javac -Xlint -d bin -classpath bin/gui.jar -sourcepath src/Cells src/Cells/TestImmigration.java
+	javac -Xlint -d bin -classpath bin/gui.jar -sourcepath src/Cells src/Cells/TestSchelling.java
 
 compileConway:
-	javac -Xlint -d bin -classpath bin/gui.jar -sourcepath src src/TestConway.java
+	javac -Xlint -d bin -classpath bin/gui.jar -sourcepath src/Cells src/Cells/TestConway.java
 
 compileImmigration:
-	javac -Xlint -d bin -classpath bin/gui.jar -sourcepath src src/TestImmigration.java
+	javac -Xlint -d bin -classpath bin/gui.jar -sourcepath src/Cells src/Cells/TestImmigration.java
 
 compileSchelling:
-	javac -Xlint -d bin -classpath bin/gui.jar -sourcepath src src/TestSchelling.java
+	javac -Xlint -d bin -classpath bin/gui.jar -sourcepath src/Cells src/Cells/TestSchelling.java
 
 #----------------------------------------------------------------------------------#
 
