@@ -8,7 +8,7 @@ public class TestImmigration {
 		// Parameters of the simulation
 		int n = 200; // number of cells vertically
 		int m = 200; // number of cells horizontally
-		int nbState = 4; // number of possible states for a cell
+		int nbState = 3; // number of possible states for a cell
 		int K = 3; // number of neighboors threshold
 		int initialProbability = 70; // probability (percentage) for a cell to start at a state > 0
 

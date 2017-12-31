@@ -2,7 +2,7 @@
 
 *Second year Java project at Ensimag - Grenoble INP - 2017*
 
-![Results](results/results.png)
+![Results](results/results.jpeg)
 
 - Simple bouncing balls
 - [Conway's game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Rules)
@@ -91,6 +91,17 @@ int initialProbability = 70; // probability (percentage) for a cell to start at 
 ```
 
 ![immigration-initialProbability-70-nbState-3-K-3](results/immigration.gif)
+
+```java
+// Parameters of the simulation
+int n = 200; // number of cells vertically
+int m = 200; // number of cells horizontally
+int nbState = 4; // number of possible states for a cell
+int K = 3; // number of neighboors threshold
+int initialProbability = 70; // probability (percentage) for a cell to start at a state > 0
+```
+
+![immigration-initialProbability-70-nbState-3-K-3](results/immigration2.gif)
 
 ### Schelling model
 
