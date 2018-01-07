@@ -65,7 +65,7 @@ Here are some example simulation results:
 
 ### Bouncing balls
 
-Random directions, velocities, sizes and colors.
+Just some bouncing balls with random directions, velocities, sizes and colors. Because why not? 🙃
 
 ![balls-nbBalls-50](results/balls.gif)
 
@@ -146,6 +146,3 @@ int initialProbability = 50; // probability (percentage) for a cell not to start
 ![class_diagram](results/class_diagram.png)
 
 - Note : when updating the next states of the cells, we use an iterator that returns all the values between 0 and a max value in a random order. That insures the realism of the model. (see `ShuffleIterator`)
-
-
-<script src="http://gif.ly/embed/62a6fee8?autoplay=true"></script>
